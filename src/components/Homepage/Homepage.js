@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Homepage.module.css";
+import PhotosGrid from "../PhotosGrid/PhotosGrid";
 
 function Homepage(props) {
   return (
@@ -7,6 +8,7 @@ function Homepage(props) {
       <header>
         <h1>Welcome to our photo gallery</h1>
       </header>
+      <PhotosGrid />
     </div>
   );
 }
