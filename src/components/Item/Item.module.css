@@ -1,8 +1,6 @@
 .Item {
-  height: 200px;
-  width: 300px;
+  height: 300px;
   display: flex;
-  margin: 10px;
   position: relative;
   overflow: hidden;
   transition: box-shadow .6s;
