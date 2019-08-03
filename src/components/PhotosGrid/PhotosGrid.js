@@ -5,7 +5,7 @@ import classes from "./PhotosGrid.module.css";
 import Item from "../Item/Item";
 
 function PhotosGrid(props) {
-  console.log(props.data);
+  // console.log(props.data);
 
   let items = <h2>No photos</h2>;
 
@@ -13,7 +13,7 @@ function PhotosGrid(props) {
     items = props.data.map(item => {
       return (
         <Item
-          key={item.id}
+          key={item.id + (Math.random() * 99).toFixed(0)}
           title={item.title}
           callout={item.callout}
           date={item.date}
@@ -22,6 +22,8 @@ function PhotosGrid(props) {
         />
       );
     });
+  } else {
+    items = <h2>No photos</h2>;
   }
 
   return <div className={classes.PhotosGrid}>{items}</div>;

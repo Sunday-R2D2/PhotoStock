@@ -1,5 +1,6 @@
 const initialState = {
-  data: null
+  data: null,
+  articleID: null
 };
 
 const reducer = (state = initialState, action) => {
@@ -8,6 +9,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         data: action.data
+      };
+    case "SEND_ID":
+      return {
+        ...state,
+        articleID: state.data[action.id - 1]
       };
     default:
       return {
